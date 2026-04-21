@@ -133,7 +133,8 @@
     .star { position:absolute;color:var(--gold);font-size:.5rem;opacity:.3;animation:twinkle 4s ease-in-out infinite; }
     @keyframes twinkle { 0%,100%{opacity:.15}50%{opacity:.5} }
 
-    .hero-content { position:relative;z-index:2;max-width:820px; }
+    .hero-content { position:relative;z-index:2;max-width:820px; width: 100%;        /* Agrega esto */
+  box-sizing: border-box; }
 
     .hero-pill {
       display:inline-flex;align-items:center;gap:10px;
