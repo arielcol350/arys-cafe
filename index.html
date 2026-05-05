@@ -231,6 +231,7 @@
     .menu-tabs { display:flex;gap:0;justify-content:center;margin-bottom:48px; }
     .tab-btn { background:transparent;border:1px solid rgba(201,161,82,.2);color:rgba(245,237,224,.5);padding:12px 32px;font-family:var(--sans);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;cursor:none;transition:all .3s;font-weight:400; }
     .tab-btn:first-child { border-right:none; }
+    .tab-btn:not(:first-child):not(:last-child) { border-right:none; }
     .tab-btn.active { background:var(--gold);color:var(--forest);border-color:var(--gold);font-weight:500; }
     .tab-btn:not(.active):hover { color:var(--gold);border-color:rgba(201,161,82,.5); }
     .menu-panel { display:none; }
@@ -461,11 +462,12 @@
     <div class="menu-header reveal">
       <span class="section-tag">Lo que ofrecemos</span>
       <h2>Nuestro <em>Menú</em></h2>
-      <p>Bebidas frías · Bebidas calientes · Postres</p>
+      <p>Bebidas frías · Bebidas calientes · Frappés · Postres</p>
     </div>
 
     <div class="menu-tabs reveal">
       <button class="tab-btn active" onclick="switchTab('drinks',this)">☕ Bebidas</button>
+      <button class="tab-btn"        onclick="switchTab('frappes',this)">🧊 Frappés</button>
       <button class="tab-btn"        onclick="switchTab('desserts',this)">🍩 Postres</button>
     </div>
 
@@ -512,6 +514,25 @@
             <div><span class="drink-name">Con Café Instantáneo</span><span class="drink-sub">Latte · Caramel Macchiato · Capuchino</span></div>
             <span class="drink-price">$2.00</span>
           </div>
+        </div>
+      </div>
+      <p class="menu-note">Disponible <strong>de miércoles a domingos</strong> · Síguenos en redes para novedades</p>
+    </div>
+
+    <!-- FRAPPÉS TAB -->
+    <div class="menu-panel" id="tab-frappes">
+      <div class="cold-featured" style="grid-template-columns:repeat(2,1fr);max-width:680px;">
+        <div class="cold-card reveal">
+          <span class="cold-emoji">🥛</span>
+          <h4>Frappé Latte</h4>
+          <p>Cremoso, helado y suave — el clásico que siempre cae bien</p>
+          <span class="cold-badge">$3.00</span>
+        </div>
+        <div class="cold-card reveal">
+          <span class="cold-emoji">🍮</span>
+          <h4>Caramel Frappé</h4>
+          <p>Café frío con capas de caramelo, bien helado y perfectamente dulce</p>
+          <span class="cold-badge">$3.00</span>
         </div>
       </div>
       <p class="menu-note">Disponible <strong>de miércoles a domingos</strong> · Síguenos en redes para novedades</p>
@@ -628,6 +649,8 @@
           <li><a href="#menu">Latte Frío</a></li>
           <li><a href="#menu">Caramel Macchiato</a></li>
           <li><a href="#menu">Capuchino</a></li>
+          <li><a href="#menu">Frappé Latte</a></li>
+          <li><a href="#menu">Caramel Frappé</a></li>
           <li><a href="#menu">Donas</a></li>
           <li><a href="#menu">Pan de Banano</a></li>
         </ul>
